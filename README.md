@@ -104,4 +104,4 @@ Welcome to the QuantumCare Clinic console application! This is a command-line in
 - **Linkedin:** [My Linkedin Profile](https://linkedin.com/in/krishnasingha)
 
 ## License
-   - This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+   - This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/krishna-singha/QuantumCare-Clinic/blob/main/LICENSE) file for details.
