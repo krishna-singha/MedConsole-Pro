@@ -60,10 +60,8 @@ Welcome to the QuantumCare Clinic console application! This is a command-line in
    - **JavaScript**
 
 ### Prerequisites
-   - 
-    ```
-    Node.js and npm installed
-    ```
+
+    `Node.js and npm installed`
 
 ### How to Run
 
