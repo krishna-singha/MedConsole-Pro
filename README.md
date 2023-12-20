@@ -2,7 +2,7 @@
 
 Welcome to the QuantumCare Clinic console application! This is a command-line interface program designed to provides a simple user Registration, Login and Exit system along with features such as Viewing available doctors, Checking doctor schedules, Booking appointments, Viewing booked appointments, and Logging out at QuantumCare Clinic.
 
-Table of Contents
+## Table of Contents
 
 - Overview
 - Functionality
