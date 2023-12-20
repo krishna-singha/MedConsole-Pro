@@ -60,7 +60,7 @@ Welcome to the QuantumCare Clinic console application! This is a command-line in
    - **JavaScript**
 
 ### Prerequisites
-
+   - 
     ```
     Node.js and npm installed
     ```
@@ -105,3 +105,5 @@ Welcome to the QuantumCare Clinic console application! This is a command-line in
 
 ## License
    - This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/krishna-singha/QuantumCare-Clinic/blob/main/LICENSE) file for details.
+
+**Happy coding! 🚀**
