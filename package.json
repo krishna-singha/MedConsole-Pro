@@ -1,0 +1,16 @@
+{
+  "name": "quantumcare-clinic",
+  "version": "1.0.0",
+  "description": "QuantumCare Clinic",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hash.js": "^1.1.7",
+    "prompt-sync": "^4.2.0"
+  }
+}
