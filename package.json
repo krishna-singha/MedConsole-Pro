@@ -1,0 +1,16 @@
+{
+  "name": "quantumcare-clinic",
+  "version": "1.0.0",
+  "description": "Welcome to the QuantumCare Clinic console application! This is a command-line interface program designed to provides a simple user Registration, Login and Exit system along with features such as Viewing available doctors, Checking doctor schedules, Booking appointments, Viewing booked appointments, and Logging out at QuantumCare Clinic.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hash.js": "^1.1.7",
+    "prompt-sync": "^4.2.0"
+  }
+}

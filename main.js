@@ -1,4 +1,6 @@
 const PromptAsync = require("prompt-sync");
+const hash = require('hash.js')
+
 const prompt = PromptAsync();
 
 
@@ -23,7 +25,7 @@ let patientInfo = [];
 let index = 0;
 
 /* ----- Function To Register ----- */
-getRegister = () => {
+const getRegister = () => {
     console.log("\n----- Enter Your Registration Informations -----\n");
     let name = prompt("Enter Your Name : ");
     let userName = prompt("Enter Your UserName : ");
@@ -31,7 +33,7 @@ getRegister = () => {
     let age = prompt("Enter Your Age : ");
     let contact = prompt("Enter Your Contact Number : ");
     let password = prompt("Enter Your Password : ");
-
+    password = hash.sha256().update(password).digest('hex');
     /* ----- Object For Storing Patient Information Inside An Array ----- */
     patientInfo[index] = {
         name,
@@ -53,14 +55,15 @@ getRegister = () => {
 }
 
 /* ----- Function For Taking Login Input ----- */
-logInInput = () => {
+const logInInput = () => {
     console.log("\n----- Enter Your Login Informations -----");
     yourUserName = prompt("Enter Your UserName : ");
     yourPass = prompt("Enter Your Password : ");
+    yourPass = hash.sha256().update(yourPass).digest('hex');
 }
 
 /* ----- Function To Checking Login Info Correct Or Not ----- */
-checkLoginInfo = () => {
+const checkLoginInfo = () => {
     userIndex = -1;
 
     for (let i = 0; i < index; i++) {
@@ -234,7 +237,7 @@ function viewBookedAppointment() {
 
 /* ----- Main Function Starts ----- */
 function main() {
-    
+
 
     mainLoop: while (true) {
 
