@@ -73,7 +73,7 @@ Welcome to the QuantumCare Clinic console application! This is a command-line in
 
 ### Prerequisites
 
-    `Node.js and npm installed`
+    Node.js and npm installed
 
 ### How to Run
 
@@ -115,5 +115,7 @@ Welcome to the QuantumCare Clinic console application! This is a command-line in
 
 ## License
    - This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/krishna-singha/QuantumCare-Clinic/blob/main/LICENSE) file for details.
+
+<br>
 
 **Happy coding! 🚀**
