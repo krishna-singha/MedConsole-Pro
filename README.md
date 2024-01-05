@@ -1,99 +1,89 @@
-# QuantumCare Clinic
+# MedConsole Pro
 
-Welcome to the QuantumCare Clinic console application! This is a command-line interface program designed to provides a simple user Registration, Login and Exit system along with features such as Viewing available doctors, Checking doctor schedules, Booking appointments, Viewing booked appointments, and Logging out at QuantumCare Clinic.
+Welcome to the **MedConsole Pro**!
 
 ## Table of Contents
 
-- Overview
-- Functionality
-- Features
-- Getting Started
-   - Language Used
-   - Prerequisites
-   - How to Run
-- Author
-- License
+- [Overview](#overview)
+- [Functionality](#functionality)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Author](#author)
+- [License](#license)
 
 ## Overview
 
-   - The QuantumCare Clinic console application is a command-line interface designed to provides a secure login system for users and features for managing appointments with doctors at QuantumCare Clinic.
+- **MedConsole Pro** is a command line interface (CLI) JavaScript project providing a seamless and secure environment for patients to register and login, along with more features such as viewing available doctors, checking doctor schedules, booking appointments, viewing booked appointments, and logging out.
 
 ## Features
 
-- User Registration.
-- User Authentication.
-- Main Menu with options:
-   - View available doctors.
-   - Check doctor schedules.
-   - Book an appointment.
-   - View booked appointments.
-   - Logout
-- Exit.
+- User registration.
+- User authentication.
+- View available doctors.
+- Check doctor schedules.
+- Book an appointment.
+- View booked appointments.
+- Logout.
+- Exit the program.
 
 ## Functionality
 
 1. `User Registration:`
 
-   - New users can register with a Name, Unique Username, Gender, Age, Contact Number and Password.
+   - New users can complete the registration process by providing essential information, including their name, a unique username, gender, age, contact number, and a secure password.
 
 2. `User Login:`
 
-   - Users can log in with their registered Username and Password.
+   - Users can access the system by logging in with their registered unique username and password.
 
 3. `View Available Doctors:`
 
-   - Users can view a list of available doctors at QuantumCare Clinic, each associated with a Unique ID, Name, and Specialty.
+   - Users can view a list of available doctors within **MedConsole Pro**, each  identified by a unique ID and accompanied by their respective specialties.
 
 4. `Check Doctor Schedules:`
 
-   - Users can select a specific doctor and view their schedule, displaying available time slots for appointments.
+   - Users can choose a doctor, check their schedule, and see available time slots for appointments within **MedConsole Pro**.
 
 5. `Book an Appointment:`
 
-   - Users can choose a doctor, select a preferred time slot from the available options, and book an appointment. The application validates the selected time slot for availability.
+   - Users have the flexibility to choose a doctor, pick a preferred time slot from the available options, and seamlessly book an appointment. The application automatically verifies the selected time slot for availability to ensure a smooth scheduling process.
 
-   - Users can book an appointment only one time with one registered username, If users want to book another appointment then they have to register with another unique username.
+   - Each registered user is allowed to book only one appointment with doctor.
 
 6. `View Booked Appointments:`
 
-   - Users can check their booked appointments, displaying details such as the 
-   Patient Name, Doctor's name, Doctor's Speciality and Appointment Time Slot.
+   - Users can check their booked appointments, with details including patient name, doctor's name, doctor's specialty, and appointment time slot.
 
 7. `Logout:`
 
-   - Users can log out of the QuantumCare Clinic console application.
+   - Users can log out of the **MedConsole Pro** application.
 
 8. `Exit:`
 
-   - Users can exit the QuantumCare Clinic console application, terminating the program.
+   - Users can exit the **MedConsole Pro** application and terminate the program.
 
 ## Getting Started
 
-### Language Used
+### → Language Used
 
    - `JavaScript`
 
-### Prerequisites
+### → Prerequisites
 
     Node.js and npm installed
 
-### How to Run
+### → How to Run
 
-   - **Using `Visual Stdio Code` (for better experience).**
 
-1. Open Visual Studio Code then open any folder then Clone the Repository to your local machine using the following command:
-
-    ```
-    git clone https://github.com/krishna-singha/QuantumCare-Clinic.git
-    ```
-
-2. Go to the folder `QuantumCare-Clinic` using the following command:
+1. Open the Terminal, clone this repository to your local machine using the following command:
 
     ```
-    cd QuantumCare-Clinic
+    git clone https://github.com/krishna-singha/MedConsole-Pro.git
     ```
 
-3. To Install `node_modules` using the following command:
+2. Open the folder `MedConsole-Pro` in terminal.
+
+3. Install `node_modules` using the following command:
 
     ```
     npm i
@@ -108,11 +98,11 @@ Welcome to the QuantumCare Clinic console application! This is a command-line in
 ## Author
 
 - **Author Name:** `Krishna Singha`
-- **GitHub:** [My GitHub Profile](https://github.com/krishna-singha)
-- **Linkedin:** [My Linkedin Profile](https://linkedin.com/in/krishnasingha)
+- **GitHub:** [Profile](https://github.com/krishna-singha)
+- **Linkedin:** [Profile](https://linkedin.com/in/krishnasingha)
 
 ## License
-   - This project is licensed under the `MIT License` - see the [LICENSE.md](https://github.com/krishna-singha/QuantumCare-Clinic/blob/main/LICENSE) file for details.
+   - This project is licensed under the `MIT License` - see the [LICENSE.md](https://github.com/krishna-singha/MedConsole-Pro/blob/main/LICENSE) file for details.
 
 <br>
 

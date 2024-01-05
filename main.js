@@ -11,7 +11,7 @@ const newLine = () => {
 
 /* ----- Function For Main Instruction ----- */
 const mainInstructions = () => {
-    console.log("\n----- QUANTUMCARE CLINIC -----\n");
+    console.log("\n----- MEDCONSOLE PRO -----\n");
     console.log("Enter 1 to Register.");
     console.log("Enter 2 to Login.");
     console.log("Enter 3 to Exit.\n");
@@ -43,13 +43,13 @@ const getRegister = () => {
     let userNameIndex = -1;
     patientInformations();
 
-    console.log("\n----- Enter Your Registration Informations -----");
-    let nameOfPatient = prompt("Enter Your Name : ");
-    let userNameOfPatient = prompt("Enter Unique UserName : ");
-    let genderOfPatient = prompt("Enter Your Gender : ");
-    let ageOfPatient = prompt("Enter Your Age : ");
-    let contactOfPatient = prompt("Enter Your Contact Number : ");
-    let passwordOfPatient = prompt("Enter Your Password : ");
+    console.log("\n----- Enter your registration informations -----");
+    let nameOfPatient = prompt("Enter your name : ");
+    let userNameOfPatient = prompt("Enter unique username : ");
+    let genderOfPatient = prompt("Enter your gender : ");
+    let ageOfPatient = prompt("Enter your age : ");
+    let contactOfPatient = prompt("Enter your contact number : ");
+    let passwordOfPatient = prompt("Enter your password : ");
 
     for (let i = 0; i < patientInfo.length; i++) {
         if (userNameOfPatient === patientInfo[i].userName) {
@@ -66,19 +66,19 @@ const getRegister = () => {
         patientInfo[patientIndex].contact = contactOfPatient;
         patientInfo[patientIndex].password = passwordOfPatient;
         patientInfo[patientIndex].password = hash.sha256().update(patientInfo[patientIndex].password).digest('hex');
-        console.log("\nCongratulations, You Have Successfully Registered..!\n");
+        console.log("\nCongratulations, You have successfully registered!\n");
     }
     else {
-        console.log("\nSorry..! UserName Already Exist.");
+        console.log("\nSorry! This username already exists.");
     }
     patientIndex++;
 }
 
 /* ----- Function For Taking Login Input ----- */
 const logInInput = () => {
-    console.log("\n----- Enter Your Login Informations -----");
-    yourUserName = prompt("Enter Your UserName : ");
-    yourPass = prompt("Enter Your Password : ");
+    console.log("\n----- Enter your login informations -----");
+    yourUserName = prompt("Enter your username : ");
+    yourPass = prompt("Enter your password : ");
     yourPass = hash.sha256().update(yourPass).digest('hex');
     newLine();
 }
@@ -99,8 +99,8 @@ const checkLoginInfo = () => {
 
 /* ----- Function To Display Profile ----- */
 const profile = (name, userName, gender, age, contact) => {
-    console.log("\n----- Patient Profile -----");
-    console.log("UserName :", userName);
+    console.log("\n----- Patient profile -----");
+    console.log("Username :", userName);
     console.log("Name :", name);
     console.log("Gender :", gender);
     console.log("Age :", age);
@@ -109,12 +109,12 @@ const profile = (name, userName, gender, age, contact) => {
 
 /* ----- Function For Main Menu ----- */
 const mainMenu = () => {
-    console.log("\n----- Main Menu -----");
-    console.log("Enter 1 To View Available Doctors");
-    console.log("Enter 2 To Check Doctor Schedules");
-    console.log("Enter 3 To Book An Appointment");
-    console.log("Enter 4 To View Booked Appointments");
-    console.log("Enter 5 For Log Out\n");
+    console.log("\n----- Main menu -----");
+    console.log("Enter 1 to view available doctors");
+    console.log("Enter 2 to check doctor schedules");
+    console.log("Enter 3 to book an appointment");
+    console.log("Enter 4 to view booked appointments");
+    console.log("Enter 5 to log out\n");
 
     let key = prompt("Enter: ");
     return key;
@@ -168,7 +168,7 @@ const doctors = {
 
 /* ----- Function To view Available Doctors ----- */
 const availableDoctors = () => {
-    console.log('\n----- Available Doctors -----');
+    console.log('\n----- Available doctors -----');
     Object.keys(doctors).forEach((docId) => {
         const doctor = doctors[docId];
         console.log(`   [ID: ${docId}] => ${doctor.name} ( ${doctor.specialty} )`);
@@ -177,20 +177,20 @@ const availableDoctors = () => {
 
 /* ----- Function To Check Doctor Schedules ----- */
 const doctorSchedules = () => {
-    console.log("\n----- Check Doctor Schedules -----");
+    console.log("\n----- Check doctor schedules -----");
     availableDoctors();
     newLine();
-    const doctorId = prompt("Enter Doctor ID: ");
+    const doctorId = prompt("Enter doctor ID: ");
 
     if (doctors[doctorId]) {
-        console.log(`\n----- Schedule For ${doctors[doctorId].name} (${doctors[doctorId].specialty}) -----`);
+        console.log(`\n----- Schedule for ${doctors[doctorId].name} (${doctors[doctorId].specialty}) -----`);
         doctors[doctorId].schedule.forEach((timeSlot) => {
             if (!doctors[doctorId].appointments.includes(timeSlot)) {
                 console.log(`      =>          ${timeSlot}`);
             }
         });
     } else {
-        console.log("\nInvalid Doctor ID. Please Try Again..!");
+        console.log("\nInvalid doctor ID. Please try again!");
     }
 }
 
@@ -223,11 +223,11 @@ function bookAppointment() {
     if (bookAppointmentIndex === -1) {
 
         availableDoctors();
-        console.log("\n----- Book An Appointment -----\n");
-        const doctorId = prompt("Enter Doctor ID: ");
+        console.log("\n----- Book an appointment -----\n");
+        const doctorId = prompt("Enter doctor ID: ");
 
         if (doctors[doctorId]) {
-            console.log(`\n----- Available Time Slots For ${doctors[doctorId].name} (${doctors[doctorId].specialty}) -----`);
+            console.log(`\n----- Available time slots for ${doctors[doctorId].name} (${doctors[doctorId].specialty}) -----`);
             doctors[doctorId].schedule.forEach((timeSlot) => {
                 if (!doctors[doctorId].appointments.includes(timeSlot)) {
                     console.log(`                ${timeSlot}`);
@@ -235,7 +235,7 @@ function bookAppointment() {
             });
             newLine();
 
-            const selectSlot = prompt("Select A Time Slot: ");
+            const selectSlot = prompt("Select a time slot: ");
 
             if (doctors[doctorId].schedule.includes(selectSlot) && !doctors[doctorId].appointments.includes(selectSlot)) {
                 doctors[doctorId].appointments.push(selectSlot);
@@ -252,16 +252,16 @@ function bookAppointment() {
 
                 appointIndex++;
 
-                console.log(`\nYour Appointment Is Booked With ${doctors[doctorId].name} ( ${doctors[doctorId].specialty} ) At ${selectSlot}`);
+                console.log(`\nYour appointment is booked with ${doctors[doctorId].name} ( ${doctors[doctorId].specialty} ) at ${selectSlot}`);
             } else {
-                console.log("\nInvalid Time Slot Or Already Booked. Choose Another Time Slot..!");
+                console.log("\nInvalid time slot or already booked. Choose another time slot!");
             }
         } else {
-            console.log("\nInvalid Doctor ID. Please Try Again..!");
+            console.log("\nInvalid doctor ID. Please try again!");
         }
     }
     else {
-        console.log("\nSorry..! You Have Already Booked An Appointment.");
+        console.log("\nSorry! You have already booked an appointment.");
     }
 }
 
@@ -277,13 +277,13 @@ function viewBookedAppointment() {
         }
     }
     if (bookedIndex !== -1) {
-        console.log('\n----- Booked Appointments -----');
+        console.log('\n----- Booked appointments -----');
         console.log(`Patient: ${userAppoints[bookedIndex].appointUser}`);
         console.log(`Doctor: ${userAppoints[bookedIndex].appointDoctor} ( ${userAppoints[bookedIndex].appointDocSpeciality} )`);
-        console.log(`Time Slot: ${userAppoints[bookedIndex].appointTimeSlot}`);
+        console.log(`Time slot: ${userAppoints[bookedIndex].appointTimeSlot}`);
     }
     else {
-        console.log("\nSorry..! You Haven't Booked An Appointment Yet.");
+        console.log("\nSorry! You haven't booked an appointment yet.");
     }
 }
 
@@ -303,7 +303,7 @@ function main() {
             case "2":
 
                 if (patientIndex === 0) {
-                    console.log("You Haven't Registered Yet, Sorry..!");
+                    console.log("Sorry! You haven't registered yet. Please register first.");
                     continue mainLoop;
                 }
 
@@ -312,7 +312,7 @@ function main() {
                     checkLoginInfo();
 
                     if (userIndex !== -1) {
-                        console.log(`Welcome Again ${patientInfo[userIndex].name}..!`);
+                        console.log(`Welcome again ${patientInfo[userIndex].name}!`);
 
                         profile(patientInfo[userIndex].name, patientInfo[userIndex].userName, patientInfo[userIndex].gender, patientInfo[userIndex].age, patientInfo[userIndex].contact);
 
@@ -337,29 +337,29 @@ function main() {
                                     break;
 
                                 case "5":
-                                    console.log("\nYou Have Sucessfully Log Out..!");
+                                    console.log("\nYou have sucessfully logged out!");
                                     continue mainLoop;
 
                                 default:
-                                    console.log("\nInvalid Choice. Please Try Again..!");
+                                    console.log("\nInvalid choice. Please try again!");
                                     break;
                             }
                         }
                     }
                     else {
-                        console.log("Invalid UserName Or PassWord..!");
+                        console.log("Invalid username or password!");
                     }
                 }
 
             case "3":
-                console.log("You Are Exiting.....");
+                console.log("\nYou are exiting.....");
                 setTimeout(() => {
-                    console.log("You Are Exited.");
+                    console.log("You are exited.\n");
                 }, 2000);
                 break mainLoop;
 
             default:
-                console.log("\nInvalid Choice. Please Try Again..!");
+                console.log("\nInvalid choice. Please try again!");
                 continue mainLoop;
         }
     }
