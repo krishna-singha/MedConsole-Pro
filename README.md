@@ -1,6 +1,6 @@
 # MedConsole Pro
 
-Welcome to the **MedConsole Pro!**
+Welcome to the **MedConsole Pro!** a command line interface (CLI) JavaScript project.
 
 ## Table of Contents
 
