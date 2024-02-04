@@ -96,7 +96,7 @@ Welcome to the **MedConsole Pro!**
 4. Run the program using the following command:
 
     ```
-    node main.js
+    npm run start
     ```
 
 ## Author
