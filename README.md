@@ -83,10 +83,14 @@ Welcome to the **MedConsole Pro**!
 
 2. Open the folder `MedConsole-Pro` in terminal.
 
+   ```
+    cd MedConsole-Pro
+    ```
+
 3. Install `node_modules` using the following command:
 
     ```
-    npm i
+    npm install or npm i
     ```
     
 4. Run the program using the following command:
