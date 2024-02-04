@@ -1,6 +1,6 @@
 # MedConsole Pro
 
-Welcome to the **MedConsole Pro**!
+Welcome to the **MedConsole Pro!**
 
 ## Table of Contents
 
